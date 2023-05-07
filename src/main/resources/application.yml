@@ -1,0 +1,17 @@
+spring:
+  flyway:
+    locations: classpath:database
+    table: user_flyway_schema_history
+    baseline-on-migrate: true
+    baseline-version: 0
+  jpa:
+    hibernate:
+      ddl-auto: none
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/cryptoCurrencyWatcher
+    username: postgres
+    password: trh52921
+crypto:
+  currency:
+    baseUrl: https://api.coinlore.net/api/tickers
